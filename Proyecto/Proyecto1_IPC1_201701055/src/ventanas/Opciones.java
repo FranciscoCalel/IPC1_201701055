@@ -5,6 +5,9 @@
  */
 package ventanas;
 
+import javax.swing.JOptionPane;
+import proyecto1_ipc1_201701055.Opciones2;
+
 /**
  *
  * @author franc
@@ -16,6 +19,7 @@ public class Opciones extends javax.swing.JFrame {
      */
     public Opciones() {
         initComponents();
+
     }
 
     /**
@@ -32,19 +36,19 @@ public class Opciones extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        t4 = new javax.swing.JLabel();
+        jlabel4 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         t1 = new javax.swing.JComboBox<>();
         t2 = new javax.swing.JComboBox<>();
         t3 = new javax.swing.JComboBox<>();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        nombre1 = new javax.swing.JTextField();
+        nombre2 = new javax.swing.JTextField();
+        t4 = new javax.swing.JComboBox<>();
         t5 = new javax.swing.JComboBox<>();
         t6 = new javax.swing.JComboBox<>();
         jLabel9 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
+        dimension = new javax.swing.JTextField();
         JUGAR = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
 
@@ -60,7 +64,7 @@ public class Opciones extends javax.swing.JFrame {
 
         jLabel5.setText("NOMBRE JUGADOR 2");
 
-        t4.setText("Turno 1");
+        jlabel4.setText("Turno 1");
 
         jLabel7.setText("Turno 2");
 
@@ -72,7 +76,7 @@ public class Opciones extends javax.swing.JFrame {
 
         t3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Princesa", "Mago", "Caballero" }));
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Princesa", "Mago", "Caballero" }));
+        t4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Princesa", "Mago", "Caballero" }));
 
         t5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Princesa", "Mago", "Caballero" }));
 
@@ -105,14 +109,14 @@ public class Opciones extends javax.swing.JFrame {
                         .addComponent(jLabel1))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(78, 78, 78)
-                        .addComponent(t4)
+                        .addComponent(jlabel4)
                         .addGap(32, 32, 32))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(59, 59, 59)
                         .addComponent(t1, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(59, 59, 59)
-                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(t4, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -143,7 +147,7 @@ public class Opciones extends javax.swing.JFrame {
                     .addComponent(jLabel9)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(10, 10, 10)
-                        .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(dimension, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(JUGAR, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -155,11 +159,11 @@ public class Opciones extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel4)
                         .addGap(27, 27, 27)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(nombre1, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel5)
                         .addGap(18, 18, 18)
-                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(nombre2, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -168,7 +172,7 @@ public class Opciones extends javax.swing.JFrame {
                 .addGap(57, 57, 57)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(nombre1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(t1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -182,12 +186,12 @@ public class Opciones extends javax.swing.JFrame {
                 .addGap(31, 31, 31)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(nombre2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(10, 10, 10)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(t4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(t5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -196,14 +200,14 @@ public class Opciones extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel7)
                     .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(t4))
+                    .addComponent(jlabel4))
                 .addGap(38, 38, 38)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel9)
                     .addComponent(JUGAR))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(dimension, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton1))
                 .addContainerGap(13, Short.MAX_VALUE))
         );
@@ -217,8 +221,34 @@ public class Opciones extends javax.swing.JFrame {
 
     private void JUGARActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JUGARActionPerformed
         // TODO add your handling code here:
-        Plataforma pl=new Plataforma();
-        pl.setVisible(true);
+        int per1 = t1.getSelectedIndex();
+        int per2 = t2.getSelectedIndex();
+        int per3 = t3.getSelectedIndex();
+        int per4 = t4.getSelectedIndex();
+        int per5 = t5.getSelectedIndex();
+        int per6 = t6.getSelectedIndex();
+
+        int tam = Integer.parseInt(dimension.getText());
+        Opciones2 op = new Opciones2();
+        op.setDim(dimension.getText());
+
+        Plataforma juego = new Plataforma();
+
+        if (tam >= 8 && tam < 19) {
+
+            if (per1 == per2 || per1 == per3 || per2 == per3 || per4 == per5
+                    || per4 == per6 || per5 == per6 || dimension.getText() == "") {
+
+                JOptionPane.showMessageDialog(null, "No pueden haber turnos iguales");
+            } else {
+                juego.show();
+                dispose();
+            }
+        } else {
+            JOptionPane.showMessageDialog(null, "Ingrese un numero entre 8-18");
+        }
+        Opciones2.setJug1(nombre1.getText());
+        Opciones2.setJug2(nombre2.getText());
     }//GEN-LAST:event_JUGARActionPerformed
 
     /**
@@ -240,7 +270,8 @@ public class Opciones extends javax.swing.JFrame {
         } catch (ClassNotFoundException ex) {
             java.util.logging.Logger.getLogger(Opciones.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Opciones.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);       } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(Opciones.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
             java.util.logging.Logger.getLogger(Opciones.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(Opciones.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
@@ -257,8 +288,8 @@ public class Opciones extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton JUGAR;
+    private javax.swing.JTextField dimension;
     private javax.swing.JButton jButton1;
-    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -267,13 +298,13 @@ public class Opciones extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
+    private javax.swing.JLabel jlabel4;
+    private javax.swing.JTextField nombre1;
+    private javax.swing.JTextField nombre2;
     private javax.swing.JComboBox<String> t1;
     private javax.swing.JComboBox<String> t2;
     private javax.swing.JComboBox<String> t3;
-    private javax.swing.JLabel t4;
+    private javax.swing.JComboBox<String> t4;
     private javax.swing.JComboBox<String> t5;
     private javax.swing.JComboBox<String> t6;
     // End of variables declaration//GEN-END:variables

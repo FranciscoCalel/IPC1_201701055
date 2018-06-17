@@ -62,6 +62,9 @@ public class Inicio extends javax.swing.JFrame {
 
     private void INICIOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_INICIOActionPerformed
         // TODO add your handling code here:
+        Opciones op=new Opciones();
+        op.setVisible(true);
+        dispose();
         
     }//GEN-LAST:event_INICIOActionPerformed
 
