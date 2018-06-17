@@ -5,6 +5,8 @@
  */
 package proyecto1_ipc1_201701055;
 
+import ventanas.Inicio;
+
 /**
  *
  * @author franc
@@ -16,7 +18,7 @@ public class Proyecto1_IPC1_201701055 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Inicio in= new Inicio();//
+        Inicio in= new Inicio();
         in.setVisible(true);
     }
                     
