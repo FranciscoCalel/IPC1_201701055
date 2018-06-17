@@ -20,6 +20,7 @@ public class Proyecto1_IPC1Q_201701055 {
         // TODO code application logic here
         Inicio in= new Inicio();
         in.setVisible(true);
+        //agrege un comentario
     }
                     
 }
