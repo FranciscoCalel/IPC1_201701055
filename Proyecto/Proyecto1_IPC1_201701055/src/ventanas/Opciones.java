@@ -6,13 +6,14 @@
 package ventanas;
 
 import javax.swing.JOptionPane;
-import proyecto1_ipc1_201701055.Opciones2;
 
 /**
  *
  * @author franc
  */
 public class Opciones extends javax.swing.JFrame {
+
+    public Plataforma pl;
 
     /**
      * Creates new form Opciones
@@ -221,35 +222,30 @@ public class Opciones extends javax.swing.JFrame {
 
     private void JUGARActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JUGARActionPerformed
         // TODO add your handling code here:
-        int per1 = t1.getSelectedIndex();
-        int per2 = t2.getSelectedIndex();
-        int per3 = t3.getSelectedIndex();
-        int per4 = t4.getSelectedIndex();
-        int per5 = t5.getSelectedIndex();
-        int per6 = t6.getSelectedIndex();
 
-        int tam = Integer.parseInt(dimension.getText());
-        Opciones2 op = new Opciones2();
-        op.setDim(dimension.getText());
-
-        Plataforma juego = new Plataforma();
-
-        if (tam >= 8 && tam < 19) {
-
-            if (per1 == per2 || per1 == per3 || per2 == per3 || per4 == per5
-                    || per4 == per6 || per5 == per6 || dimension.getText() == "") {
-
-                JOptionPane.showMessageDialog(null, "No pueden haber turnos iguales");
-            } else {
-                juego.show();
-                dispose();
-            }
+        if (nombre1.getText().equals("") || nombre2.getText().equals("")) {
+            JOptionPane.showMessageDialog(null, "Faltan datos");
         } else {
-            JOptionPane.showMessageDialog(null, "Ingrese un numero entre 8-18");
+            pl = new Plataforma();
+            pl.setVisible(true);
+            pl.setLocationRelativeTo(null);
+            pl.setBounds(100, 50, 800, 550);
+            this.setVisible(false);
+
+            enlace();
         }
-        Opciones2.setJug1(nombre1.getText());
-        Opciones2.setJug2(nombre2.getText());
     }//GEN-LAST:event_JUGARActionPerformed
+    public void enlace() {
+        pl.nj1.setText(this.nombre1.getText());
+        pl.nj2.setText(this.nombre2.getText());
+        pl.j1.setText(this.t1.getSelectedItem().toString());
+        pl.j2.setText(this.t2.getSelectedItem().toString());
+        pl.j3.setText(this.t3.getSelectedItem().toString());
+        pl.j4.setText(this.t4.getSelectedItem().toString());
+        pl.j5.setText(this.t5.getSelectedItem().toString());
+        pl.j6.setText(this.t6.getSelectedItem().toString());
+
+    }
 
     /**
      * @param args the command line arguments
@@ -301,11 +297,11 @@ public class Opciones extends javax.swing.JFrame {
     private javax.swing.JLabel jlabel4;
     private javax.swing.JTextField nombre1;
     private javax.swing.JTextField nombre2;
-    private javax.swing.JComboBox<String> t1;
-    private javax.swing.JComboBox<String> t2;
-    private javax.swing.JComboBox<String> t3;
-    private javax.swing.JComboBox<String> t4;
-    private javax.swing.JComboBox<String> t5;
-    private javax.swing.JComboBox<String> t6;
+    public javax.swing.JComboBox<String> t1;
+    public javax.swing.JComboBox<String> t2;
+    public javax.swing.JComboBox<String> t3;
+    public javax.swing.JComboBox<String> t4;
+    public javax.swing.JComboBox<String> t5;
+    public javax.swing.JComboBox<String> t6;
     // End of variables declaration//GEN-END:variables
 }
