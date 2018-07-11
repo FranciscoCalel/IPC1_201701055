@@ -1,0 +1,10 @@
+digraph listaEscritorio { node[shape=record]; 
+subgraph escritorio{
+nodo984769918[label="Escritorio: M&#92;nEstado: Disponible&#92;nTotal Doc: 0"];
+nodo984769918->nodo1255409414;
+nodo1255409414->nodo984769918;
+nodo1255409414[label="Escritorio: G&#92;nEstado: Disponible&#92;nTotal Doc: 0"];
+
+rank = same  nodo984769918}
+
+}

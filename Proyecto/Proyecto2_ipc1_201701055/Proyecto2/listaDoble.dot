@@ -1,0 +1,4 @@
+digraph listaAvion {  node[shape=record];
+nodo1249359137[label="Avion: 1&#92;nTamaño: Grande&#92;nPasajeros: 38&#92;nDesabordaje: 3&#92;nMantenimiento: 3"];
+
+}

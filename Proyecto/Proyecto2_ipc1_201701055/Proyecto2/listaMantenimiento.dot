@@ -1,0 +1,9 @@
+digraph listaMantenimiento { node[shape=record]; 
+subgraph estacion{
+nodo2019652096[label="Estacion: 1&#92;nEstado: Disponible"];
+nodo2019652096->nodo84820844;
+nodo84820844[label="Estacion: 2&#92;nEstado: Disponible"];
+
+rank = same nodo2019652096}
+subgraph cola {}
+}
